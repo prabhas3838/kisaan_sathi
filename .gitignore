@@ -1,0 +1,16 @@
+node_modules/
+.env
+uploads/
+*.txt
+*.log
+check_inventory.js
+test_epic7.js
+find_admin.js
+find_admin_all.js
+list_users.js
+list_all_users.js
+list_all_users_json.js
+check_pwd_status.js
+check_admin_properly.js
+check_9876543210.js
+check_7777777777_full.js
