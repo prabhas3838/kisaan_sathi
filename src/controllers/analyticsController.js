@@ -19,8 +19,9 @@ const BASELINE_PRICES = {
 const runPythonPrediction = async (historicalData, days) => {
     return new Promise((resolve, reject) => {
         const pythonScript = path.join(__dirname, "../ml/predict.py");
-        // Start Python process - Use 'py' for Windows, 'python3' for others
-        const python = spawn("py", [pythonScript]);
+        // Start Python process - Use 'python3' for Unix/Mac/Linux, 'py' or 'python' for Windows
+        const pythonCommand = 'python3'; // Defaulting to python3 for Render/Linux deployment
+        const python = spawn("python3", [pythonScript]);
 
         let dataString = "";
         let errorString = "";
