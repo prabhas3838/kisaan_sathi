@@ -7,8 +7,9 @@ const cors = require("cors");
 
 app.use(express.json());
 app.use(cors({
-  origin: true,
-  credentials: true
+  origin: "*",
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization", "x-request-id"]
 }));
 
 if (process.env.NODE_ENV !== "test") {
